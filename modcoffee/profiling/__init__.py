@@ -19,4 +19,4 @@ def disk_total():
     return psutil.disk_usage('/').total
 
 def disk_available():
-    return psutil.disk_usage('/').available
+    return psutil.disk_usage('/').free
