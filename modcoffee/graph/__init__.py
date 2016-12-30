@@ -5,20 +5,19 @@ These methods and classes (modcoffee.graph.Graph) are used to manage the
 application configuration via a logical graph of components
 (modcoffee.graph.Component).
 '''
-
 class Graph(object):
     '''
     A class to represent the logical graph of application Components
     '''
     def __init__(self):
-        pass
+        self.components = {}
 
     def register_component(self, component_id, docker_run_args):
         '''
         Register an application component into the graph, with the arguments to
         run it as a docker instance
         '''
-        pass
+        self.components[component_id] = docker_run_args
 
     def build_master(self):
         '''

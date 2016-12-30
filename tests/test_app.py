@@ -20,4 +20,5 @@ def test_add_component():
     assert 'load balancer' in mc.components
 
 def test_start_component():
-    assert isinstance(mc.start_component(), mcg.Component)
+    app = mc.graph.Graph()
+    assert mc.start_component(app, 'test')

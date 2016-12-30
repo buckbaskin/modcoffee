@@ -14,11 +14,14 @@ import modcoffee.profiling as profiling
 import psutil
 import requests
 
+from contextlib import contextmanager
+
 # pylint: disable=invalid-name
 
 components = {}
 
-def start_component():
+@contextmanager
+def start_component(graph, component_id):
     '''
     Create a component for the application to run.
     TODO do some magic to track the right information for registering the
@@ -26,9 +29,21 @@ def start_component():
 
     Usage: (within an application)
 
-    mc.start_component()
+    with mc.start_component():
 
-    ... application code ...
+        ... application code ...
 
     '''
-    return graph.Component()
+    # __enter__ code
+    print('Start building the component')
+    docker_parameters = {}
+
+    components = graph.components
+
+    yield docker_parameters
+    # __exit__ code
+    print('Complete building the component')
+    print('start_component(): post-parameters %s' % (docker_parameters,))
+    graph.register_component(component_id, docker_parameters)
+
+print('end of import modcoffee')
