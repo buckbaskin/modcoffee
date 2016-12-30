@@ -1,1 +1,3 @@
-This file will be used track features for each release.
+# History
+
+The HISTORY.md file will be used track features for each release.
