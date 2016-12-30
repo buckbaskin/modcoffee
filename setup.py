@@ -36,7 +36,10 @@ setup(
     url='https://github.com/buckbaskin/modcoffee',
     packages=packages,
     package_data={'': ['LICENSE']},
-    package_dir={'modcoffee': 'modcoffee'},
+    package_dir={
+        'modcoffee': 'modcoffee',
+        'modcoffee.graph': 'modcoffee/graph'
+    },
     include_package_data=True,
     install_requires=requires,
     license='MIT',

@@ -8,7 +8,7 @@ test:
 	py.test tests
 
 coverage:
-	py.test --verbose --cov-report term --cov-report html:htmlcov --cov=modcoffee tests
+	py.test --verbose --cov-report term --cov-report html:cover --cov=modcoffee tests
 
 publish:
 	python setup.py register

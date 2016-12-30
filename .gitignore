@@ -1,2 +1,7 @@
+.cache/
+build/
 cover/
+dist/
+htmlcov/
+
 .coverage
