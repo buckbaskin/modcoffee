@@ -5,3 +5,5 @@ dist/
 htmlcov/
 
 .coverage
+modcoffee.sublime-project
+modcoffee.sublime-workspace
