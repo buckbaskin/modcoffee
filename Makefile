@@ -8,10 +8,7 @@ test:
 	py.test tests
 
 coverage:
-	py.test --verbose --cov-report term --cov=requests tests
-
-ci: init
-	py.test --junitxml=junit.xml
+	py.test --verbose --cov-report term --cov-report html:cover --cov=modcoffee tests
 
 publish:
 	python setup.py register
