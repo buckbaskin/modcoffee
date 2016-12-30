@@ -10,6 +10,10 @@ test:
 coverage:
 	py.test --verbose --doctest-modules --cov-report term --cov-report html:cover --cov=modcoffee tests modcoffee
 
+lint:
+	pylint modcoffee/
+	pylint --disable=R,C,I tests/
+
 publish:
 	python setup.py register
 	python setup.py sdist upload
