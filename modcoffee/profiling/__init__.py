@@ -3,10 +3,20 @@ import psutil
 # TODO check to see how this works with docker allocation
 
 def cpu_total():
-    return psutil.cpu_count()
+    '''
+    Returns the number of logical cpus in the system
+
+    >>> isinstance(cpu_total(), int)
+    True
+    '''
+    return psutil.cpu_count(logical=True)
 
 def cpu_available():
-    # TODO: check if this is right
+    '''
+    Equivalent to modcoffee.profiling.cpu_total
+    '''
+    # This is the same as total because of process switching. It might make
+    #   sense to have this track the Docker cpu allocation
     return psutil.cpu_count()
 
 def mem_total():

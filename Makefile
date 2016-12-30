@@ -5,10 +5,10 @@ init:
 test:
 	# This runs all of the tests. To run an individual test, run py.test with
 	# the -k flag, like "py.test -k test_path_is_not_double_encoded"
-	py.test tests
+	py.test --verbose --doctest-modules tests modcoffee
 
 coverage:
-	py.test --verbose --cov-report term --cov-report html:cover --cov=modcoffee tests
+	py.test --verbose --doctest-modules --cov-report term --cov-report html:cover --cov=modcoffee tests modcoffee
 
 publish:
 	python setup.py register
