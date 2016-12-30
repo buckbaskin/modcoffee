@@ -1,0 +1,7 @@
+coverage
+Flask
+py
+pytest
+pytest-cov
+pytest-mock
+
