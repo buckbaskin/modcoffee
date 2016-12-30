@@ -7,8 +7,6 @@ applications.
 
 import psutil
 
-# TODO check to see how this works with docker allocation
-
 def cpu_total():
     '''
     Returns the number of logical cpus in the system
