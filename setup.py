@@ -13,7 +13,8 @@ from setuptools.command.test import test as TestCommand
 
 packages = [
     'modcoffee',
-    'modcoffee.graph'
+    'modcoffee.graph',
+    'modcoffee.profiling'
 ]
 
 requires = []
@@ -38,7 +39,8 @@ setup(
     package_data={'': ['LICENSE']},
     package_dir={
         'modcoffee': 'modcoffee',
-        'modcoffee.graph': 'modcoffee/graph'
+        'modcoffee.graph': 'modcoffee/graph',
+        'modcoffee.profiling': 'modcoffee/profiling'
     },
     include_package_data=True,
     install_requires=requires,
