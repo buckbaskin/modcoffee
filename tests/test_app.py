@@ -1,4 +1,5 @@
 import modcoffee as mc
+import modcoffee.graph as mcg
 
 import pytest
 
@@ -15,8 +16,8 @@ def test_modcoffee_app():
 
 def test_add_component():
     app = mc.graph.Graph()
-    app.register_component('load balancer')
+    app.register_component('load balancer', {})
     assert 'load balancer' in mc.components
 
 def test_start_component():
-    assert isinstance(mc.start_component(), mc.Component)
+    assert isinstance(mc.start_component(), mcg.Component)

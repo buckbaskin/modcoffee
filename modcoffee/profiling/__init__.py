@@ -1,3 +1,10 @@
+'''
+The modcoffee.profiling subpackage
+
+These methods are used to identify system properties in order to help run
+applications.
+'''
+
 import psutil
 
 # TODO check to see how this works with docker allocation
