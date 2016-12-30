@@ -1,10 +1,11 @@
 pip>=9.0.1
 
+docker==2.0.0
 Flask==0.12
 psutil==5.0.1
 
 # testing
-codecov
+codecov>=2.0.5
 coverage==4.3.1
 py==1.4.32
 pytest==3.0.5
